@@ -7,6 +7,6 @@
 
 Ссылки:
 
-1. [xsd-class-generator](https://github.com/gorodnyuk/awesome-examples/tree/master/_01-xsd-class-generator)
+1. [Генерация классов из xsd-схемы](https://github.com/gorodnyuk/awesome-examples/tree/master/_01-xsd-class-generator)
 2. ...
 3. ...
