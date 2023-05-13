@@ -1,9 +1,9 @@
 # Демонстрация работы Kafka producer и consumer
 
-1. Скачать Kafka - https://kafka.apache.org/downloads
-   Следующие шаги подразумевают, что путь до Kafka не был указан в переменной Path  
-   Все команды запускаются из разархивированной папки (Windows)  
-   Настройки стандартные
+1. Скачать Kafka - https://kafka.apache.org/downloads  
+   Следующие шаги подразумевают, что путь до Kafka не был указан в переменной Path.  
+   Все команды запускаются из разархивированной папки (Windows).  
+   Настройки стандартные.
 2. Запустить ZooKeeper - bin/windows/zookeeper-server-start config/zookeeper.properties
 3. Запустить Kafka - bin/windows/kafka-server-start config/server.properties
 
