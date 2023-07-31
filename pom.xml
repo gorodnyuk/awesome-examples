@@ -21,6 +21,7 @@
     <modules>
         <module>_01-xsd-class-generator</module>
         <module>_02-kafka-demo</module>
+        <module>_03-db-table-relationships</module>
     </modules>
 
     <properties>
