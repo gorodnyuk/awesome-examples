@@ -42,7 +42,7 @@ public class Person {
     private String extra;
 
     @OneToOne
-    @JoinColumn(name = "passport_id", referencedColumnName = "id")
+    @JoinColumn(name = "passport_id", referencedColumnName = "id") // с этой стороны будет создан FK
     private Passport passport;
 
     @OneToMany(mappedBy = "person")
