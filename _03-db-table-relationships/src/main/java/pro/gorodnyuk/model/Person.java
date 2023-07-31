@@ -8,6 +8,7 @@ import jakarta.persistence.JoinColumn;
 import jakarta.persistence.JoinTable;
 import jakarta.persistence.ManyToMany;
 import jakarta.persistence.OneToMany;
+import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 import jakarta.persistence.Transient;
 import lombok.AllArgsConstructor;
@@ -40,7 +41,9 @@ public class Person {
     @Transient // поле, которое не нужно отображать в БД
     private String extra;
 
-    // todo @OneToOne, н-р, паспорт
+    @OneToOne
+    @JoinColumn(name = "passport_id", referencedColumnName = "id")
+    private Passport passport;
 
     @OneToMany(mappedBy = "person")
     private List<Car> cars = new ArrayList<>();
