@@ -37,6 +37,9 @@ public class Car {
     @Column(name = "description")
     private String description;
 
+    @Lob
+    private Byte[] document; // сохранения файла в БД
+
     @ManyToOne
     private Person person; // это FK, тк со стороны 'многие'
 }
