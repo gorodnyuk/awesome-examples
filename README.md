@@ -10,3 +10,4 @@
 1. [Генерация классов из xsd-схемы](https://github.com/gorodnyuk/awesome-examples/tree/master/_01-xsd-class-generator)
 2. [Работа с Kafka](https://github.com/gorodnyuk/awesome-examples/tree/master/_02-kafka-demo)
 3. [Работа с ORM](https://github.com/gorodnyuk/awesome-examples/tree/master/_03-db-table-relationships)
+4. [Тесты](https://github.com/gorodnyuk/awesome-examples/tree/master/_04-tests)
