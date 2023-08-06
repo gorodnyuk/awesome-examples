@@ -1,24 +1,21 @@
 package pro.gorodnyuk.service;
 
-import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 import pro.gorodnyuk.model.Person;
 import pro.gorodnyuk.repository.PersonRepository;
 
 @Service
-@RequiredArgsConstructor
 public class PersonService {
 
-    private final DefaultGenerator defaultGenerator;
-    private final PersonRepository personRepository;
-    private final RestTemplate restTemplate;
+    @Autowired
+    private DefaultGenerator defaultGenerator;
 
-    public PersonService(DefaultGenerator defaultGenerator, PersonRepository personRepository) {
-        this.defaultGenerator = defaultGenerator;
-        this.personRepository = personRepository;
-        this.restTemplate = new RestTemplate();
-    }
+    @Autowired
+    private PersonRepository personRepository;
+
+    private final RestTemplate restTemplate = new RestTemplate();
 
     /**
      * Взять сущность из текущего проекта

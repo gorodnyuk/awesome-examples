@@ -1,0 +1,12 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:statements
+    username: sa
+    password:
+    driverClassName: org.h2.Driver
+  h2:
+    console:
+      enabled: true
+  jpa:
+    hibernate:
+      ddl-auto: none # что бы можно было использовать скрипт инициализации resources/schema.sql
