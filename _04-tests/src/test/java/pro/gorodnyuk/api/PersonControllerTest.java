@@ -14,6 +14,9 @@ import pro.gorodnyuk.service.PersonService;
 
 import java.util.List;
 
+/**
+ * Тест контроллера
+ */
 @WebMvcTest(PersonController.class)
 public class PersonControllerTest {
 

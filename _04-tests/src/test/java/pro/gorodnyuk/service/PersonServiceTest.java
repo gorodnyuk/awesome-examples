@@ -13,6 +13,10 @@ import pro.gorodnyuk.repository.PersonRepository;
 
 import java.util.Optional;
 
+/**
+ * Юнит тесты с использованием Mockito
+ * Покрывается большинство важных сценариев
+ */
 @ExtendWith(MockitoExtension.class)
 public class PersonServiceTest {
 
