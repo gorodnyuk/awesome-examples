@@ -18,7 +18,7 @@ public class DefaultGeneratorTest {
 
     @Test
     public void shouldGenerateDefaultPerson() {
-        Person defaultPerson = defaultGenerator.getDefaultPerson();
+        Person actual = defaultGenerator.getDefaultPerson();
 
         Person expected = Person.builder()
                 .id(999L)
@@ -27,6 +27,6 @@ public class DefaultGeneratorTest {
                 .address("Moscow, default 1")
                 .build();
 
-        Assertions.assertEquals(expected, defaultPerson);
+        Assertions.assertEquals(expected, actual);
     }
 }
