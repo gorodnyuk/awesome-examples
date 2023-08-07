@@ -7,6 +7,6 @@ import pro.gorodnyuk.model.Person;
 public class DefaultGenerator {
 
     public Person getDefaultPerson() {
-        return new Person(999L, "Oleg", "xxx_Oleg_xxx", "Moscow");
+        return new Person(999L, "Oleg", "xxx_oleg_xxx", "Moscow, default 1");
     }
 }
