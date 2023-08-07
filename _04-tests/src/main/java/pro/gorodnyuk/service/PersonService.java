@@ -7,6 +7,8 @@ import org.springframework.web.client.RestTemplate;
 import pro.gorodnyuk.model.Person;
 import pro.gorodnyuk.repository.PersonRepository;
 
+import java.util.List;
+
 @Setter
 @Service
 public class PersonService {
@@ -27,6 +29,15 @@ public class PersonService {
      */
     public Person getDefaultPerson() {
         return defaultGenerator.getDefaultPerson();
+    }
+
+    /**
+     * Взять все сущности из базы данных
+     *
+     * @return persons list
+     */
+    public List<Person> getAllPersons() {
+        return personRepository.findAll();
     }
 
     /**

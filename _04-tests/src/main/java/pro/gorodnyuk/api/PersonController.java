@@ -8,12 +8,19 @@ import org.springframework.web.bind.annotation.RestController;
 import pro.gorodnyuk.model.Person;
 import pro.gorodnyuk.service.PersonService;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/api")
 @RequiredArgsConstructor
 public class PersonController {
 
     private final PersonService personService;
+
+    @GetMapping
+    private List<Person> getAllPersons() {
+        return personService.getAllPersons();
+    }
 
     @GetMapping("/{nickName}")
     public Person getPersonByNickName(@PathVariable("nickName") String nickName) {
