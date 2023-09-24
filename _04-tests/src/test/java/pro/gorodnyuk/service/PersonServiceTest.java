@@ -6,6 +6,7 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.Mockito;
+import org.mockito.Spy;
 import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.web.client.RestTemplate;
 import pro.gorodnyuk.model.Person;
@@ -28,6 +29,9 @@ public class PersonServiceTest {
 
     @Mock
     private RestTemplate restTemplate;
+
+    @Spy
+    private DummyService dummyService;
 
     @InjectMocks
     private PersonService personService;
@@ -119,5 +123,12 @@ public class PersonServiceTest {
         Assertions.assertThrows(RuntimeException.class, () -> personService.getPersonFromIntegration());
 
         Mockito.verify(restTemplate).getForObject("http://localhost:9090/person", Person.class);
+    }
+
+    @Test
+    public void spyTest() {
+        personService.dummy();
+
+        Mockito.verify(dummyService).dummy();
     }
 }

@@ -22,6 +22,9 @@ public class PersonService {
     @Autowired
     private RestTemplate restTemplate;
 
+    @Autowired
+    private DummyService dummyService;
+
     /**
      * Взять сущность из текущего проекта
      *
@@ -57,5 +60,12 @@ public class PersonService {
      */
     public Person getPersonFromIntegration() {
         return restTemplate.getForObject("http://localhost:9090/person", Person.class);
+    }
+
+    /**
+     * Пример Spy-объекта
+     */
+    public void dummy() {
+        dummyService.dummy();
     }
 }
